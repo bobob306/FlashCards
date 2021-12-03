@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/addFlashCard">
+
+    <fragment
+        android:id="@+id/addFlashCard"
+        android:name="com.benb.flashcards.ui.AddFlashCard"
+        android:label="fragment_add_flash_card"
+        tools:layout="@layout/fragment_add_flash_card" >
+        <action
+            android:id="@+id/action_addFlashCard_to_flashCardList"
+            app:destination="@id/flashCardList" />
+        <action
+            android:id="@+id/action_addFlashCard_to_test"
+            app:destination="@id/test" />
+    </fragment>
+    <fragment
+        android:id="@+id/flashCardList"
+        android:name="com.benb.flashcards.FlashCardList"
+        android:label="fragment_flash_card_list"
+        tools:layout="@layout/fragment_flash_card_list" >
+        <action
+            android:id="@+id/action_flashCardList_to_addFlashCard"
+            app:destination="@id/addFlashCard" />
+        <action
+            android:id="@+id/action_flashCardList_to_test"
+            app:destination="@id/test" />
+    </fragment>
+    <fragment
+        android:id="@+id/test"
+        android:name="com.benb.flashcards.Test"
+        android:label="fragment_test"
+        tools:layout="@layout/fragment_test" >
+        <action
+            android:id="@+id/action_test_to_addFlashCard"
+            app:destination="@id/addFlashCard" />
+        <action
+            android:id="@+id/action_test_to_flashCardList"
+            app:destination="@id/flashCardList" />
+    </fragment>
+</navigation>
