@@ -5,6 +5,8 @@
       <map>
         <entry key="..\:/Users/bobob/AndroidStudioProjects/FlashCards/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/bobob/AndroidStudioProjects/FlashCards/app/src/main/res/layout/fragment_add_flash_card.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/bobob/AndroidStudioProjects/FlashCards/app/src/main/res/layout/fragment_flash_card_list.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/bobob/AndroidStudioProjects/FlashCards/app/src/main/res/layout/list_view_item.xml" value="0.36666666666666664" />
       </map>
     </option>
   </component>
