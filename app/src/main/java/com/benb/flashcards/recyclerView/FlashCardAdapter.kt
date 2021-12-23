@@ -1,15 +1,10 @@
 package com.benb.flashcards.recyclerView
 
-import android.app.Fragment
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.view.ViewParent
-import android.widget.ListAdapter
-import android.widget.TextView
 import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.benb.flashcards.R
 import com.benb.flashcards.data.FlashCard
 import com.benb.flashcards.databinding.ListViewItemBinding
 

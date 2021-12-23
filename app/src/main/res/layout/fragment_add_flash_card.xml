@@ -1,122 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
-
-    <data>
-
-        <variable
-            name="viewModel"
-            type="com.benb.flashcards.ui.FlashCardViewModel" />
-
-        <variable
-            name="addFlashCardFragment"
-            type="com.benb.flashcards.ui.AddFlashCard" />
-    </data>
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="ui.AddFlashCard">
+        android:layout_margin="16dp">
 
-        <TextView
-            android:id="@+id/screen_title"
+
+        <Button
+            android:id="@+id/saveBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:text="@string/create_a_new_flash_card"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-            android:textStyle="bold"
+            android:layout_marginTop="200dp"
+            android:text="@string/save"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/answerET" />
+
+        <TextView
+            android:id="@+id/questionTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/enter_question"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-
-        <TextView
-            android:id="@+id/add_q"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="32dp"
-            android:text="@string/enter_q"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/screen_title">
-
-        </TextView>
-
         <EditText
-            android:id="@+id/enter_q"
-            style="@style/Widget.AppCompat.EditText"
+            android:id="@+id/questionET"
             android:layout_width="0dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="32dp"
+            android:layout_height="wrap_content"
             android:ems="10"
             android:gravity="start|top"
-            android:hint="@string/enter_q"
+            android:hint="@string/enter_question"
             android:inputType="textMultiLine"
+            android:minHeight="50dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/add_q"
-            app:layout_constraintTop_toBottomOf="@+id/add_q" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/questionTV" />
 
         <TextView
-            android:id="@+id/add_a"
+            android:id="@+id/answerTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="@string/enter_a"
-            app:layout_constraintStart_toStartOf="@+id/enter_q"
-            app:layout_constraintTop_toBottomOf="@+id/enter_q">
-
-        </TextView>
+            android:text="@string/enter_answer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/questionET" />
 
         <EditText
-            android:id="@+id/enter_a"
+            android:id="@+id/answerET"
             android:layout_width="0dp"
-            android:layout_height="102dp"
-            android:layout_marginTop="16dp"
+            android:layout_height="wrap_content"
             android:ems="10"
             android:gravity="start|top"
-            android:hint="@string/enter_a"
+            android:hint="@string/enter_answer"
             android:inputType="textMultiLine"
-            app:layout_constraintEnd_toEndOf="@+id/enter_q"
-            app:layout_constraintStart_toStartOf="@+id/add_a"
-            app:layout_constraintTop_toBottomOf="@+id/add_a" />
-
-
-        <Button
-            android:id="@+id/testButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/test"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/allCardsButton"
-            app:layout_constraintTop_toTopOf="@+id/allCardsButton" />
-
-
-        <Button
-            android:id="@+id/allCardsButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="@string/see_all"
-            app:layout_constraintEnd_toStartOf="@+id/testButton"
+            app:layout_constraintHeight_min="50dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/saveButton" />
-
-        <Button
-            android:id="@+id/saveButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="@string/save"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/enter_a" />
-
+            app:layout_constraintTop_toBottomOf="@+id/answerTV" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-</layout>
+</ScrollView>

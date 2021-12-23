@@ -4,8 +4,7 @@ import androidx.room.*
 import kotlinx.coroutines.flow.Flow
 
 @Dao
-interface FlashCardDao {
-
+interface FLashCardDao {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insert(flashCard: FlashCard)
 
@@ -15,10 +14,10 @@ interface FlashCardDao {
     @Delete
     suspend fun delete(flashCard: FlashCard)
 
-    @Query ("SELECT * FROM cards WHERE id = :id")
-    fun getCard(id: Int): Flow<FlashCard>
+    @Query ("SELECT * FROM `flashcard` WHERE id = :id" )
+    fun getFlashCard(id: Int): Flow<FlashCard>
 
-    @Query ("SELECT * FROM cards ORDER BY id ASC")
-    fun getCards() : Flow<List<FlashCard>>
+    @Query ("SELECT * FROM `flashcard` ORDER BY question ASC")
+    fun getFlashCards(): Flow<List<FlashCard>>
 
 }

@@ -35,7 +35,7 @@ class FlashCardList: Fragment () {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentFlashCardListBinding.inflate(inflater, container, attachToParent = false)
+        _binding = FragmentFlashCardListBinding.inflate(inflater, container, false)
         val view = binding.root
         return super.onCreateView(inflater, container, savedInstanceState)
     }
