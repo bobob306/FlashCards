@@ -7,4 +7,7 @@
     <string name="save">Save</string>
     <string name="list_of_flash_cards">List of flash cards</string>
     <string name="add_new_flash_card">Add new Flash Card</string>
+    <string name="delete">Delete</string>
+    <string name="flash_card_list_label">Flash Card List</string>
+    <string name="add_or_edit_label">Add or Edit Flash Card</string>
 </resources>

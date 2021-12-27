@@ -56,6 +56,12 @@ class FlashCardViewModel (private val fLashCardDao: FLashCardDao) : ViewModel() 
         return FlashCard(id, question, answer)
     }
 
+    fun deleteCard(flashCard: FlashCard) {
+        viewModelScope.launch {
+            fLashCardDao.delete(flashCard)
+        }
+    }
+
     private fun updateFlashCard(flashCard: FlashCard) {
         viewModelScope.launch {
             fLashCardDao.update(flashCard)

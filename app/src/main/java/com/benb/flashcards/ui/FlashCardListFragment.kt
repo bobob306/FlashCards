@@ -37,7 +37,8 @@ class FlashCardListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val adapter = FlashCardAdapter {
-            //TODO navigate to individual card
+            val action = FlashCardListFragmentDirections.actionFlashCardListFragmentToAddFlashCardFragment(it.id)
+            this.findNavController().navigate(action)
         }
 
         binding.recyclerView.adapter = adapter

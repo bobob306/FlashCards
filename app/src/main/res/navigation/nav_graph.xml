@@ -8,19 +8,34 @@
     <fragment
         android:id="@+id/addFlashCardFragment"
         android:name="com.benb.flashcards.ui.AddFlashCardFragment"
-        android:label="AddFlashCardFragment" >
+        android:label="@string/add_or_edit_label">
         <action
             android:id="@+id/action_addFlashCardFragment_pop_including_flashCardListFragment"
             app:popUpTo="@id/flashCardListFragment"
             app:popUpToInclusive="true" />
+        <argument
+            android:name="flashCardId"
+            android:defaultValue="-1"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_addFlashCardFragment_to_flashCardListFragment"
+            app:destination="@id/flashCardListFragment" />
     </fragment>
     <fragment
         android:id="@+id/flashCardListFragment"
         android:name="com.benb.flashcards.ui.FlashCardListFragment"
-        android:label="fragment_flash_card_list"
-        tools:layout="@layout/fragment_flash_card_list" >
+        android:label="@string/flash_card_list_label"
+        tools:layout="@layout/fragment_flash_card_list">
         <action
             android:id="@+id/action_flashCardListFragment_to_addFlashCardFragment"
-            app:destination="@id/addFlashCardFragment" />
+            app:destination="@id/addFlashCardFragment">
+            <argument
+                android:name="flashCardId"
+                android:defaultValue="-1" />
+        </action>
+        <argument
+            android:name="flashCardId"
+            android:defaultValue="-1"
+            app:argType="integer" />
     </fragment>
 </navigation>

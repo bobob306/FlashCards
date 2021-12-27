@@ -8,10 +8,10 @@
     tools:context=".ui.FlashCardListFragment">
 
     <TextView
-        android:id="@+id/title"
+        android:id="@+id/instructions"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/list_of_flash_cards"
+        android:text="Click on a question to reveal the answer, tap on the answer to hide it again. /n Click on a blank space to edit the flash card"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -22,7 +22,7 @@
         android:layout_height="1dp"
         android:background="?android:attr/listDivider"
         android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintTop_toBottomOf="@+id/instructions"
         />
 
     <androidx.recyclerview.widget.RecyclerView
