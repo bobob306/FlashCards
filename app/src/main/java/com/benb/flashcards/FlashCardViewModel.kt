@@ -3,6 +3,9 @@ package com.benb.flashcards
 import androidx.lifecycle.*
 import com.benb.flashcards.data.FLashCardDao
 import com.benb.flashcards.data.FlashCard
+import com.benb.flashcards.databinding.ListViewItemBinding
+import com.benb.flashcards.recyclerView.FlashCardAdapter
+import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.launch
 import java.lang.IllegalArgumentException
 
@@ -32,6 +35,9 @@ class FlashCardViewModel (private val fLashCardDao: FLashCardDao) : ViewModel() 
             return false }
         return true
     }
+
+    val allFlashCards: LiveData<List<FlashCard>> = fLashCardDao.getFlashCards().asLiveData()
+
 
     /***
      ** End of adding flash cards to database

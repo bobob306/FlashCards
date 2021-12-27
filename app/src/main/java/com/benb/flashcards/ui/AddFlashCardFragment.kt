@@ -1,4 +1,4 @@
-package com.benb.flashcards
+package com.benb.flashcards.ui
 
 import android.content.Context
 import android.os.Bundle
@@ -9,6 +9,8 @@ import android.view.ViewGroup
 import com.benb.flashcards.FlashCardApplication
 import android.view.inputmethod.InputMethodManager
 import androidx.fragment.app.activityViewModels
+import com.benb.flashcards.FlashCardViewModel
+import com.benb.flashcards.FlashCardViewModelFactory
 import com.benb.flashcards.data.FlashCard
 import com.benb.flashcards.databinding.FragmentAddFlashCardBinding
 
@@ -36,9 +38,13 @@ class AddFlashCardFragment : Fragment() {
     ): View? {
         _binding = FragmentAddFlashCardBinding.inflate(inflater, container, false)
 
+        /*
         binding.saveBtn.setOnClickListener {
             addNewItem()
+            clearETs()
         }
+
+         */
         return binding.root
     }
 
@@ -47,6 +53,11 @@ class AddFlashCardFragment : Fragment() {
             binding.questionET.text.toString(),
             binding.answerET.text.toString(),
         )
+    }
+
+    private fun clearETs() {
+        binding.questionET.setText("")
+        binding.answerET.setText("")
     }
 
     private fun addNewItem() {
@@ -62,6 +73,7 @@ class AddFlashCardFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.saveBtn.setOnClickListener {
             addNewItem()
+            clearETs()
         }
     }
 
