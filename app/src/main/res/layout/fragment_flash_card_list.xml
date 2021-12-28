@@ -11,7 +11,7 @@
         android:id="@+id/instructions"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Click on a question to reveal the answer, tap on the answer to hide it again. /n Click on a blank space to edit the flash card"
+        android:text="@string/instructions"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

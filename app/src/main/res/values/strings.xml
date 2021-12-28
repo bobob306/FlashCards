@@ -10,4 +10,5 @@
     <string name="delete">Delete</string>
     <string name="flash_card_list_label">Flash Card List</string>
     <string name="add_or_edit_label">Add or Edit Flash Card</string>
+    <string name="instructions">Click on a question to reveal the answer, tap on the answer to hide it again. Click on a blank space to edit the flash card</string>
 </resources>
